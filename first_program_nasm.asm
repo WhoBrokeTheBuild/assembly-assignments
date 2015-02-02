@@ -13,8 +13,10 @@ _start:
     mov eax, num
     add eax, 20
     mov [sum], eax
-
-    mov eax, 0
+	
+	mov	ebx,0
+	mov	eax,1
+	int	0x80
     ret
 
 
