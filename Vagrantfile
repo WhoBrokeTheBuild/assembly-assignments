@@ -6,8 +6,7 @@ Vagrant.configure(2) do |config|
   config.vm.box = "ubuntu/trusty32"
 
   config.vm.provision "shell", inline: <<-SHELL
-    apt-get install nasm -y
-	
+    apt-get install nasm gdb -y
 
   SHELL
 

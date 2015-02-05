@@ -1,22 +1,17 @@
 section .data
-	msg: 		db 		"The answer is: %d", 10, 0
+
+msg:	db		"%d", 10, 0
+arr:	dw		1, 2, 3, 4, 5, 6
 
 section .bss
 
 section .text
     global main
-	extern printf
-
-main:
+	global printf
 	
-	mov eax, 0x123 ; A = 1
-	mov ebx, 0x456 ; B = 2
-	mov ecx, 0x789 ; C = 4
-	mov edx, 0x123 ; D = 5
+main:
 
-	add eax, ebx ; A = A + B
-	add ecx, edx ; C = C + D
-	sub eax, ecx ; A = A - C
+	
 	
 	push eax 
 	push msg 
