@@ -1,0 +1,89 @@
+
+a5:     file format elf32-i386
+
+
+Disassembly of section .init:
+
+...
+
+0804873d <main>:
+ 804873d:	55                   	push   %ebp
+ 804873e:	89 e5                	mov    %esp,%ebp
+ 8048740:	57                   	push   %edi
+ 8048741:	56                   	push   %esi
+ 8048742:	53                   	push   %ebx
+ 8048743:	83 e4 f0             	and    $0xfffffff0,%esp
+ 8048746:	83 ec 20             	sub    $0x20,%esp
+ 8048749:	c7 44 24 04 30 89 04 	movl   $0x8048930,0x4(%esp)
+ 8048750:	08 
+ 8048751:	c7 04 24 e0 a0 04 08 	movl   $0x804a0e0,(%esp)
+ 8048758:	e8 a3 fe ff ff       	call   8048600 <_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc@plt>
+ 804875d:	8d 44 24 18          	lea    0x18(%esp),%eax
+ 8048761:	89 44 24 04          	mov    %eax,0x4(%esp)
+ 8048765:	c7 04 24 40 a0 04 08 	movl   $0x804a040,(%esp)
+ 804876c:	e8 9f fe ff ff       	call   8048610 <_ZNSirsERi@plt>
+ 8048771:	c7 44 24 04 3f 89 04 	movl   $0x804893f,0x4(%esp)
+ 8048778:	08 
+ 8048779:	c7 04 24 e0 a0 04 08 	movl   $0x804a0e0,(%esp)
+ 8048780:	e8 7b fe ff ff       	call   8048600 <_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc@plt>
+ 8048785:	8d 44 24 1c          	lea    0x1c(%esp),%eax
+ 8048789:	89 44 24 04          	mov    %eax,0x4(%esp)
+ 804878d:	c7 04 24 40 a0 04 08 	movl   $0x804a040,(%esp)
+ 8048794:	e8 77 fe ff ff       	call   8048610 <_ZNSirsERi@plt>
+ 8048799:	8b 54 24 1c          	mov    0x1c(%esp),%edx
+ 804879d:	8b 44 24 18          	mov    0x18(%esp),%eax
+ 80487a1:	89 54 24 04          	mov    %edx,0x4(%esp)
+ 80487a5:	89 04 24             	mov    %eax,(%esp)
+ 80487a8:	e8 e3 00 00 00       	call   8048890 <add> ; This is the call to the add() function
+ 80487ad:	89 c3                	mov    %eax,%ebx
+ 80487af:	8b 74 24 1c          	mov    0x1c(%esp),%esi
+ 80487b3:	8b 7c 24 18          	mov    0x18(%esp),%edi
+ 80487b7:	c7 44 24 04 4f 89 04 	movl   $0x804894f,0x4(%esp)
+ 80487be:	08 
+ 80487bf:	c7 04 24 e0 a0 04 08 	movl   $0x804a0e0,(%esp)
+ 80487c6:	e8 35 fe ff ff       	call   8048600 <_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc@plt>
+ 80487cb:	89 7c 24 04          	mov    %edi,0x4(%esp)
+ 80487cf:	89 04 24             	mov    %eax,(%esp)
+ 80487d2:	e8 c9 fd ff ff       	call   80485a0 <_ZNSolsEi@plt>
+ 80487d7:	c7 44 24 04 58 89 04 	movl   $0x8048958,0x4(%esp)
+ 80487de:	08 
+ 80487df:	89 04 24             	mov    %eax,(%esp)
+ 80487e2:	e8 19 fe ff ff       	call   8048600 <_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc@plt>
+ 80487e7:	89 74 24 04          	mov    %esi,0x4(%esp)
+ 80487eb:	89 04 24             	mov    %eax,(%esp)
+ 80487ee:	e8 ad fd ff ff       	call   80485a0 <_ZNSolsEi@plt>
+ 80487f3:	c7 44 24 04 5c 89 04 	movl   $0x804895c,0x4(%esp)
+ 80487fa:	08 
+ 80487fb:	89 04 24             	mov    %eax,(%esp)
+ 80487fe:	e8 fd fd ff ff       	call   8048600 <_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc@plt>
+ 8048803:	89 5c 24 04          	mov    %ebx,0x4(%esp)
+ 8048807:	89 04 24             	mov    %eax,(%esp)
+ 804880a:	e8 91 fd ff ff       	call   80485a0 <_ZNSolsEi@plt>
+ 804880f:	c7 44 24 04 30 86 04 	movl   $0x8048630,0x4(%esp)
+ 8048816:	08 
+ 8048817:	89 04 24             	mov    %eax,(%esp)
+ 804881a:	e8 01 fe ff ff       	call   8048620 <_ZNSolsEPFRSoS_E@plt>
+ 804881f:	b8 00 00 00 00       	mov    $0x0,%eax
+ 8048824:	8d 65 f4             	lea    -0xc(%ebp),%esp
+ 8048827:	5b                   	pop    %ebx
+ 8048828:	5e                   	pop    %esi
+ 8048829:	5f                   	pop    %edi
+ 804882a:	5d                   	pop    %ebp
+ 804882b:	c3                   	ret    
+
+...
+
+08048890 <add>:
+ 8048890:	55                   	push   %ebp				1 Byte
+ 8048891:	89 e5                	mov    %esp,%ebp		2 Bytes
+ 8048893:	56                   	push   %esi				1 Byte
+ 8048894:	8b 45 0c             	mov    0xc(%ebp),%eax	3 Bytes
+ 8048897:	8b 5d 08             	mov    0x8(%ebp),%ebx	3 Bytes
+ 804889a:	01 d8                	add    %ebx,%eax		2 Bytes
+ 804889c:	5e                   	pop    %esi				1 Byte
+ 804889d:	5d                   	pop    %ebp				1 Byte
+ 804889e:	c3                   	ret    					1 Byte
+ 804889f:	90                   	nop						1 Byte
+
+...
+
