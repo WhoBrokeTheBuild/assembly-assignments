@@ -1,0 +1,65 @@
+
+a6:     file format elf32-i386
+
+080487e6 <main>:
+ 80487e6:	55                   	push   %ebp
+ 80487e7:	89 e5                	mov    %esp,%ebp
+ 80487e9:	83 e4 f0             	and    $0xfffffff0,%esp
+ 80487ec:	e8 6f 00 00 00       	call   8048860 <asmMain>
+ 80487f1:	b8 00 00 00 00       	mov    $0x0,%eax
+ 80487f6:	c9                   	leave  
+ 80487f7:	c3                   	ret    
+
+08048860 <asmMain>:
+ 8048860:	55                   	push   %ebp
+ 8048861:	89 e5                	mov    %esp,%ebp
+ 8048863:	56                   	push   %esi
+ 8048864:	e8 04 ff ff ff       	call   804876d <getGrade>
+ 8048869:	83 f8 5a             	cmp    $0x5a,%eax
+ 804886c:	7d 11                	jge    804887f <gradeA>
+ 804886e:	83 f8 50             	cmp    $0x50,%eax
+ 8048871:	7d 1c                	jge    804888f <gradeB>
+ 8048873:	83 f8 46             	cmp    $0x46,%eax
+ 8048876:	7d 27                	jge    804889f <gradeC>
+ 8048878:	83 f8 3c             	cmp    $0x3c,%eax
+ 804887b:	7d 32                	jge    80488af <gradeD>
+ 804887d:	eb 40                	jmp    80488bf <gradeF>
+
+0804887f <gradeA>:
+ 804887f:	b8 41 00 00 00       	mov    $0x41,%eax
+ 8048884:	50                   	push   %eax
+ 8048885:	e8 15 ff ff ff       	call   804879f <printGrade>
+ 804888a:	83 c4 04             	add    $0x4,%esp
+ 804888d:	eb 3e                	jmp    80488cd <done>
+
+0804888f <gradeB>:
+ 804888f:	b8 42 00 00 00       	mov    $0x42,%eax
+ 8048894:	50                   	push   %eax
+ 8048895:	e8 05 ff ff ff       	call   804879f <printGrade>
+ 804889a:	83 c4 04             	add    $0x4,%esp
+ 804889d:	eb 2e                	jmp    80488cd <done>
+
+0804889f <gradeC>:
+ 804889f:	b8 43 00 00 00       	mov    $0x43,%eax
+ 80488a4:	50                   	push   %eax
+ 80488a5:	e8 f5 fe ff ff       	call   804879f <printGrade>
+ 80488aa:	83 c4 04             	add    $0x4,%esp
+ 80488ad:	eb 1e                	jmp    80488cd <done>
+
+080488af <gradeD>:
+ 80488af:	b8 44 00 00 00       	mov    $0x44,%eax
+ 80488b4:	50                   	push   %eax
+ 80488b5:	e8 e5 fe ff ff       	call   804879f <printGrade>
+ 80488ba:	83 c4 04             	add    $0x4,%esp
+ 80488bd:	eb 0e                	jmp    80488cd <done>
+
+080488bf <gradeF>:
+ 80488bf:	b8 46 00 00 00       	mov    $0x46,%eax
+ 80488c4:	50                   	push   %eax
+ 80488c5:	e8 d5 fe ff ff       	call   804879f <printGrade>
+ 80488ca:	83 c4 04             	add    $0x4,%esp
+
+080488cd <done>:
+ 80488cd:	5e                   	pop    %esi
+ 80488ce:	5d                   	pop    %ebp
+ 80488cf:	c3                   	ret    
