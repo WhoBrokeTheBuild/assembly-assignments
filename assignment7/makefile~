@@ -1,0 +1,4 @@
+all:
+	g++ -m32 -o a6 main.cpp
+	rm *.o
+
